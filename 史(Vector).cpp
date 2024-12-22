@@ -9,7 +9,7 @@ class Vector
     friend ostream& operator <<(ostream& os,const Vector<U> &v);
     private:
     T* p;
-    unsigned long long int len;
+     int len;
     public:
     Vector()
     {
@@ -29,14 +29,13 @@ class Vector
     {
         delete p;
     }
-    T add(T a)
+    int add(T a)
     {
-        T temp;
-        temp=p[len-1];
+
 		len+=1;
         p=(T*)realloc(p,len*sizeof(T));
         p[len-1]=a;
-        return temp;
+        return len-1;
     }
     void remove(int a)
     {
