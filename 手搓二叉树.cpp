@@ -8,9 +8,9 @@ class note {
     note *before;
     note *left;
     note *right;
-    note(int value,note *left=NULL,note *right=NULL) {
+    note(int value,note *left=nullptr,note *right=nullptr) {
         this->value = value;
-        this->before = NULL;
+        this->before = nullptr;
         this->left = left;
         this->right = right;
         if(left)
